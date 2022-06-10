@@ -1,13 +1,256 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #22254b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a{
+    display: block;
+    text-decoration: none;
+}
+
+span {
+    color: #50C650;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    margin: auto;
+    width: 90%;
+}
+
+.nav__wrapper{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__wrapper_left{
+    color: white;
+    font-size: 20px;
+}
+
+.nav__wrapper_right{
+    color: white;
+    display: flex;
+    gap: 40px;
+}
+
+.search{
+    border: 1px solid white;
+    padding: 10px 15px;
+    width: 200px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+}
+
+.user{
+    margin-top: 5px;
+}
+
+.hero__container{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    max-height: 600px ;
+    border-radius: 10px;
+}
+
+.hero__img{
+    width: 100%;
+    height: 600px;
+}
+
+.hero__info{
+    color: white;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    padding: 0 30px;
+}
+
+.hero__text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    width: 70%;
+}
+
+.hero__text_top{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.hero__title{
+    font-size: 45px;
+}
+
+.hero__btn{
+    position: absolute;
+    z-index: 99;
+    bottom: 15%;
+    right: 10%;
+    z-index: 99;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #50C650;
+    width: 20px;
+    height: 20px;
+    padding: 30px;
+    border-radius: 100%;
+    border: 5px solid white;
+    transition: all 0.5s ease-in-out;
+}
+
+.hero__btn:hover{
+        background-color: #3d9a3d;
+}
+
+.movies__recommend{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.movies__wrapper{
+    padding-bottom: 50px;
+}
+
+.more__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card{
+    position: relative;
+    width: 210px;
+    background-color: #373b69;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.1),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072)
+;
+}
+
+
+.card__bottom{
+    height: 40px;
+    color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__btn{
+    height: 100%;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover .card__btn{
+    transform: translateY(0);
+}
+
+.card__btn_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 130px;
+}
+
+.card__title{
+    font-weight: 600;
+}
+
+.card__btn_play{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #50C650;
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 100%;
+    border: 1.7px solid white;
+    transition: all 0.5s ease-in-out;
+}
+
+.card__btn_details{
+    margin-top: 10px;
+    color: white;
+}
+
+.card__btn_play:hover{
+    background-color: #3d9a3d;
+}
+
+/* Responsive Phone*/
+
+@media screen and (max-width: 428px){
+    .container{
+        width: 90%;
+    }
+
+    .nav__wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .user{
+        display: none;
+    }
+
+    .search{
+        width: 300px;
+    }
+
+    .hero__title{
+        margin-top: 10px;
+        font-size: 25px;
+        line-height: 120%;
+        margin-bottom: 20px;
+    }
+
+    .hero__info{
+        padding: 0 15px;
+    }
+
+    .hero__btn{
+        bottom: 45%;
+        right: 40%;
+    }
 }
