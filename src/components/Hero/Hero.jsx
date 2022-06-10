@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <div className="container hero__container">
       <a href={hero.url}>
-    <img className='hero__img' src={hero.image?.original ? hero.image?.original : 'https://via.placeholder.com/1221x600' } alt="" />
+    <img className='hero__img' src={hero.image?.original ? hero.image?.original : 'https://via.placeholder.com/1222x600' } alt="" />
     <div className="hero__info">
       <div className='hero__text'>
       <div className="hero__text_top">
