@@ -218,8 +218,14 @@ span {
     background-color: #3d9a3d;
 }
 
-/* Responsive Phone*/
+/* responsive Tablet */
+@media screen and (max-width: 768px){
+    .user{
+        display: none;
+    }
+}
 
+/* Responsive Phone*/
 @media screen and (max-width: 428px){
     .container{
         width: 90%;
