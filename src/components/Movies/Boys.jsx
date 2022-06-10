@@ -12,7 +12,7 @@ const Movies = () => {
     )
 
     const boysData = await data.json()
-    console.log("ini datanya => ", boysData);
+    // console.log("ini datanya => ", boysData);
     setBoys(boysData)
   }
 

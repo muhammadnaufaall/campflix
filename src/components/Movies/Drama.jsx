@@ -12,7 +12,7 @@ const Movies = () => {
       )
   
       const dramaData = await data.json()
-      console.log("ini datanya => ", dramaData);
+      // console.log("ini datanya => ", dramaData);
       setDrama(dramaData)
     }
   
